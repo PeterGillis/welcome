@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for welcome-silent-sun-4946 on 2025-12-12T14:12:11+01:00
+# fly.toml app configuration file generated for welcome-twilight-dew-4170 on 2025-12-15T10:37:04+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'welcome-silent-sun-4946'
+app = 'welcome-twilight-dew-4170'
 primary_region = 'fra'
 console_command = '/rails/bin/rails console'
 
@@ -20,6 +20,54 @@ console_command = '/rails/bin/rails console'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
+
+  [[http_service.checks]]
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/up'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [http_service.checks.headers]
+      X-Forwarded-Proto = 'https'
+
+  [[http_service.checks]]
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/up'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [http_service.checks.headers]
+      X-Forwarded-Proto = 'https'
+
+  [[http_service.checks]]
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/up'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [http_service.checks.headers]
+      X-Forwarded-Proto = 'https'
+
+  [[http_service.checks]]
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/up'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [http_service.checks.headers]
+      X-Forwarded-Proto = 'https'
 
   [[http_service.checks]]
     interval = '10s'
