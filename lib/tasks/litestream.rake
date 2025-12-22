@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 LITESTREAM_CONFIG = ENV["LITESTREAM_CONFIG"] || Rails.root.join("tmp/litestream.yml").to_s
 
 LITESTREAM_TEMPLATE = <<-EOF
